@@ -1,42 +1,54 @@
 // src/components/Programs.jsx
 
 import { motion } from "framer-motion";
+import coreldraw from "../assets/programs/coreldraw.png";
+import office from "../assets/programs/office.png";
+import photoshop from "../assets/programs/photoshop.png";
+import illustrator from "../assets/programs/illustrator.png";
+import sketchup from "../assets/programs/sketchup.png";
+import concar from "../assets/programs/concar.png";
 
 const programs = [
   {
     name: "Microsoft Office",
     category: "Productividad",
-    icon: "📊",
+    icon: office,
+    image: true,
   },
 
   {
     name: "Adobe Photoshop",
     category: "Diseño Gráfico",
-    icon: "🎨",
+    icon: photoshop,
+    image: true,
   },
 
   {
     name: "Adobe Illustrator",
     category: "Vectorial",
-    icon: "🖌️",
+    icon: illustrator,
+    image: true,
   },
 
   {
     name: "CorelDRAW",
     category: "Diseño Profesional",
-    icon: "💡",
+    icon: coreldraw,
+    image: true,
   },
 
   {
     name: "SketchUp",
     category: "Modelado 3D",
-    icon: "🏗️",
+    icon: sketchup,
+    image: true,
   },
 
   {
     name: "CONCAR",
     category: "Contabilidad",
-    icon: "📁",
+    icon: concar,
+    image: true,
   },
 ];
 
@@ -107,15 +119,29 @@ function Programs() {
               <div className="flex items-center justify-between mb-8">
 
                 {/* ICON */}
-                <motion.div
-                  whileHover={{
-                    rotate: 5,
-                    scale: 1.1,
-                  }}
-                  className="text-6xl"
-                >
-                  {program.icon}
-                </motion.div>
+              <motion.div
+                whileHover={{
+                  rotate: 5,
+                  scale: 1.1,
+                }}
+                className="flex items-center justify-center"
+              >
+
+                {program.image ? (
+            <div className="w-28 h-28 bg-white rounded-3xl flex items-center justify-center p-4 shadow-2xl group-hover:scale-110 transition duration-500">
+
+              <img
+                src={program.icon}
+                alt={program.name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+                ) : (
+                  <div className="text-6xl">
+                    {program.icon}
+                  </div>
+                )}
+              </motion.div>
 
                 {/* CATEGORY */}
                 <span className="bg-green-500/10 text-green-400 border border-green-400/20 px-4 py-2 rounded-full text-sm">
