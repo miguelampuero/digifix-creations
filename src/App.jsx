@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import Loader from "./components/Loader";
 import ChatBot from "./components/ChatBot";
-import ParticlesBackground from "./components/ParticlesBackground";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -30,8 +29,6 @@ function App() {
         <Loader />
       ) : (
         <div className="bg-black text-white overflow-hidden">
-
-          <ParticlesBackground />
 
           <Navbar />
 
