@@ -9,3 +9,18 @@ body {
   color: white;
   overflow-x: hidden;
 }
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.4);
+  border-radius: 999px;
+}

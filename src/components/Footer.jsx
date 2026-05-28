@@ -114,12 +114,14 @@ function Footer() {
             <FaFacebookF size={20} />
             </a>
 
-              <a
-                href="#"
-                className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 hover:border-green-400 flex items-center justify-center transition hover:scale-110"
-              >
-                <FaInstagram size={20} />
-              </a>
+            <a
+              href="https://www.instagram.com/digifixcreations/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 hover:border-pink-500 hover:text-pink-400 flex items-center justify-center transition hover:scale-110"
+            >
+              <FaInstagram size={20} />
+            </a>
             </div>
           </div>
         </div>
@@ -128,7 +130,7 @@ function Footer() {
         <div className="border-t border-white/10 mt-16 pt-8 text-center text-gray-500">
 
           <p>
-            © 2025 DigiFix Creations — Todos los derechos reservados.
+            © 2026 DigiFix Creations — Todos los derechos reservados.
           </p>
         </div>
       </div>

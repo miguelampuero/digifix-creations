@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Laptop, Zap } from "lucide-react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Hero() {
   return (
@@ -61,14 +62,27 @@ function Hero() {
             </a>
           </div>
 
+        <div className="flex flex-wrap items-center gap-6 mt-8">
+
           <a
             href="https://www.facebook.com/profile.php?id=61577374914652"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 text-green-400 hover:text-green-300 transition"
-            >
-            Visitar Facebook Oficial →
-            </a>
+            className="flex items-center gap-2 text-green-400 hover:text-green-300 transition font-medium"
+          >
+            📘 Facebook
+          </a>
+
+          <a
+            href="https://www.instagram.com/digifixcreations/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-pink-400 hover:text-pink-300 transition font-medium"
+          >
+            📸 Instagram
+          </a>
+
+        </div>
 
           {/* STATS */}
           <div className="flex flex-wrap gap-10 mt-14">

@@ -76,7 +76,7 @@ function Services() {
             className="group relative"
           >
 
-            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8">
+      <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 h-[260px] flex flex-col">
 
               <div className="text-green-400 mb-8">
                 {service.icon}
@@ -86,9 +86,9 @@ function Services() {
                 {service.title}
               </h3>
 
-              <p className="text-gray-400">
-                {service.description}
-              </p>
+            <p className="text-gray-400 mt-auto">
+            {service.description}
+          </p>
             </div>
           </motion.div>
         ))}

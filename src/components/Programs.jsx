@@ -1,6 +1,5 @@
-// src/components/Programs.jsx
-
 import { motion } from "framer-motion";
+
 import coreldraw from "../assets/programs/coreldraw.png";
 import office from "../assets/programs/office.png";
 import photoshop from "../assets/programs/photoshop.png";
@@ -14,6 +13,15 @@ const programs = [
     category: "Productividad",
     icon: office,
     image: true,
+
+    description:
+      "Word, Excel, PowerPoint y herramientas esenciales para productividad profesional y empresarial.",
+
+    features: [
+      "✅ Activación completa",
+      "✅ Office optimizado",
+      "✅ Compatible con Windows",
+    ],
   },
 
   {
@@ -21,6 +29,15 @@ const programs = [
     category: "Diseño Gráfico",
     icon: photoshop,
     image: true,
+
+    description:
+      "Edición profesional de imágenes y diseño gráfico para creadores y emprendedores.",
+
+    features: [
+      "✅ Instalación segura",
+      "✅ Rendimiento optimizado",
+      "✅ Herramientas profesionales",
+    ],
   },
 
   {
@@ -28,6 +45,15 @@ const programs = [
     category: "Vectorial",
     icon: illustrator,
     image: true,
+
+    description:
+      "Diseño vectorial profesional para logos, branding y contenido creativo.",
+
+    features: [
+      "✅ Configuración profesional",
+      "✅ Máximo rendimiento",
+      "✅ Compatible con plugins",
+    ],
   },
 
   {
@@ -35,6 +61,15 @@ const programs = [
     category: "Diseño Profesional",
     icon: coreldraw,
     image: true,
+
+    description:
+      "Diseño gráfico avanzado para impresión, publicidad y trabajos profesionales.",
+
+    features: [
+      "✅ Optimización avanzada",
+      "✅ Herramientas completas",
+      "✅ Instalación segura",
+    ],
   },
 
   {
@@ -42,6 +77,15 @@ const programs = [
     category: "Modelado 3D",
     icon: sketchup,
     image: true,
+
+    description:
+      "Modelado 3D profesional para arquitectura, interiores y proyectos técnicos.",
+
+    features: [
+      "✅ Renderizado optimizado",
+      "✅ Configuración profesional",
+      "✅ Compatible con extensiones",
+    ],
   },
 
   {
@@ -49,14 +93,23 @@ const programs = [
     category: "Contabilidad",
     icon: concar,
     image: true,
+
+    description:
+      "Sistema contable profesional para empresas, negocios y gestión financiera.",
+
+    features: [
+      "✅ Instalación completa",
+      "✅ Configuración segura",
+      "✅ Optimización empresarial",
+    ],
   },
 ];
 
 function Programs() {
   return (
     <section
-    id="programas"
-    className="relative py-32 px-6 bg-zinc-950 overflow-hidden scroll-mt-24"
+      id="programas"
+      className="relative py-32 px-6 bg-zinc-950 overflow-hidden scroll-mt-24"
     >
 
       {/* BACKGROUND GLOW */}
@@ -113,35 +166,34 @@ function Programs() {
             <div className="absolute inset-0 bg-green-500/10 opacity-0 group-hover:opacity-100 blur-2xl transition duration-500 rounded-[32px]"></div>
 
             {/* CARD */}
-            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 transition duration-500 group-hover:border-green-400/40 overflow-hidden h-full">
-
+<div className="relative bg-zinc-950/90 backdrop-blur-xl border border-zinc-800 rounded-[32px] p-8 transition duration-500 group-hover:border-green-400/40 group-hover:shadow-green-500/10 group-hover:shadow-2xl overflow-hidden min-h-[650px] flex flex-col">
               {/* TOP */}
               <div className="flex items-center justify-between mb-8">
 
                 {/* ICON */}
-              <motion.div
-                whileHover={{
-                  rotate: 5,
-                  scale: 1.1,
-                }}
-                className="flex items-center justify-center"
-              >
+                <motion.div
+                  whileHover={{
+                    rotate: 5,
+                    scale: 1.1,
+                  }}
+                  className="flex items-center justify-center"
+                >
 
-                {program.image ? (
-            <div className="w-28 h-28 bg-white rounded-3xl flex items-center justify-center p-4 shadow-2xl group-hover:scale-110 transition duration-500">
+                  {program.image ? (
+                    <div className="w-28 h-28 bg-white rounded-3xl flex items-center justify-center p-4 shadow-2xl group-hover:scale-110 transition duration-500">
 
-              <img
-                src={program.icon}
-                alt={program.name}
-                className="w-full h-full object-contain"
-              />
-            </div>
-                ) : (
-                  <div className="text-6xl">
-                    {program.icon}
-                  </div>
-                )}
-              </motion.div>
+                      <img
+                        src={program.icon}
+                        alt={program.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="text-6xl">
+                      {program.icon}
+                    </div>
+                  )}
+                </motion.div>
 
                 {/* CATEGORY */}
                 <span className="bg-green-500/10 text-green-400 border border-green-400/20 px-4 py-2 rounded-full text-sm">
@@ -155,32 +207,28 @@ function Programs() {
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-400 mt-5 leading-relaxed">
-                Instalación, configuración y optimización
-                profesional para máximo rendimiento.
-              </p>
+            <p className="text-gray-400 mt-5 leading-relaxed min-h-[110px]">
+              {program.description}
+            </p>
 
               {/* FEATURES */}
-              <div className="mt-8 space-y-3">
+              <div className="mt-8 space-y-3 flex-1">
 
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  ✅ Instalación segura
-                </div>
-
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  ✅ Configuración profesional
-                </div>
-
-                <div className="flex items-center gap-3 text-sm text-gray-300">
-                  ✅ Optimización avanzada
-                </div>
+                {program.features.map((feature, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 text-sm text-gray-300"
+                  >
+                    {feature}
+                  </div>
+                ))}
               </div>
 
               {/* BUTTON */}
               <a
                 href="https://wa.me/51981041162"
                 target="_blank"
-                className="inline-block mt-8 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-2xl font-semibold shadow-lg shadow-green-500/20"
+                className="inline-block mt-10 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-2xl font-semibold shadow-lg shadow-green-500/20"
               >
                 Solicitar Ahora
               </a>
